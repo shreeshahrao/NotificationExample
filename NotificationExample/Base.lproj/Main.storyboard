@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarWars" translatesAutoresizingMaskIntoConstraints="NO" id="uNc-Tn-xVX">
+                                <rect key="frame" x="20" y="64" width="374" height="309"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98w-c9-80d">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qYc-gg-70J"/>
+                                    <constraint firstAttribute="height" constant="50" id="tsQ-DI-axK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0X-Y6-Vur">
+                                <rect key="frame" x="122.5" y="573" width="169" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="1zN-Dh-VlE"/>
+                                    <constraint firstAttribute="height" constant="83" id="7F2-FR-WsI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Choose a Side">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="anotherScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awI-xA-NTS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uNc-Tn-xVX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3nT-Fv-JK4"/>
+                            <constraint firstItem="98w-c9-80d" firstAttribute="top" secondItem="uNc-Tn-xVX" secondAttribute="bottom" constant="50" id="961-BL-yqk"/>
+                            <constraint firstItem="f0X-Y6-Vur" firstAttribute="top" secondItem="98w-c9-80d" secondAttribute="bottom" constant="100" id="EZd-vt-X2R"/>
+                            <constraint firstItem="98w-c9-80d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MSV-F7-qbn"/>
+                            <constraint firstItem="f0X-Y6-Vur" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfS-Wa-gGP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uNc-Tn-xVX" secondAttribute="trailing" constant="20" id="Pk8-Nd-kbl"/>
+                            <constraint firstItem="98w-c9-80d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QWN-77-Dun"/>
+                            <constraint firstItem="uNc-Tn-xVX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="V8V-Bb-dox"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstScreenImage" destination="uNc-Tn-xVX" id="QaL-qS-zAd"/>
+                        <outlet property="firstScreenLabel" destination="98w-c9-80d" id="LFr-07-0BS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="86"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="4cm-km-lqU">
+            <objects>
+                <viewController storyboardIdentifier="secondScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uhR-Uy-EKm" customClass="SecondViewController" customModule="NotificationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqc-9m-dZu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lxw-yp-zcV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Side Do you Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ka-bR-9h5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pmh-F4-54H">
+                                        <rect key="frame" x="0.0" y="176.5" width="414" height="641.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txd-lI-8w3">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="296"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="Imperial"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="imperialPressed:" destination="uhR-Uy-EKm" eventType="touchUpInside" id="SSK-mI-D6g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwF-b5-VmA">
+                                                <rect key="frame" x="0.0" y="346" width="414" height="295.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="Rebel"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="rebelPressed:" destination="uhR-Uy-EKm" eventType="touchUpInside" id="dEb-is-Hhc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wzs-qV-bHb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lxw-yp-zcV" firstAttribute="leading" secondItem="wzs-qV-bHb" secondAttribute="leading" id="eDB-Ie-4w7"/>
+                            <constraint firstItem="wzs-qV-bHb" firstAttribute="bottom" secondItem="lxw-yp-zcV" secondAttribute="bottom" id="nfy-Sc-d2F"/>
+                            <constraint firstItem="lxw-yp-zcV" firstAttribute="top" secondItem="wzs-qV-bHb" secondAttribute="top" id="o0c-Qc-6dK"/>
+                            <constraint firstItem="wzs-qV-bHb" firstAttribute="trailing" secondItem="lxw-yp-zcV" secondAttribute="trailing" id="qik-wj-LaE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UH5-6I-evF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.49275362318849" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Imperial" width="225" height="224"/>
+        <image name="Rebel" width="255" height="198"/>
+        <image name="StarWars" width="289" height="174"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
